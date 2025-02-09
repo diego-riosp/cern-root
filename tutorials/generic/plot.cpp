@@ -2,6 +2,13 @@
 // Command to run: 
 // root -l plot.cpp
 
+#include <TGraph.h>
+#include <TCanvas.h>
+#include <TPaveText.h>
+#include <TText.h>
+#include <TAxis.h>
+#include <TStyle.h>
+
 void plot() {
   gStyle->SetAxisColor(2, "XY");
   gStyle->SetLabelColor(2, "XY");
@@ -42,6 +49,6 @@ void plot() {
   TText *pt_LaTex = pt->AddText("Distance Time Graph");
   gr->Draw();
   pt->Draw("same");
-  c1->Print("plot.pdf");
-  c1->Print("plot_settings.C");
+  c1->Print("tutorials/generic/plot.pdf");
+  c1->Print("tutorials/generic/plot_settings.C");
 }

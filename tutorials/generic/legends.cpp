@@ -1,3 +1,8 @@
+#include <TCanvas.h>
+#include <TF1.h>
+#include <TGraph.h>
+#include <TLegend.h>
+
 void legends() {
     TGraph * gr = new TGraph("tutorials/data/data.dat", "%lg %*lg %lg");
     gr->SetMarkerStyle(3);

@@ -1,4 +1,12 @@
+#include <iostream>
+#include <TCanvas.h>
+#include <TRandom3.h>
+#include <TH1D.h>
+
+using namespace std;
+
 void histograms() {
+    TCanvas * c1 = new TCanvas("c1", "Histograms", 800, 600);
     TH1D * h1 = new TH1D("h1", "this is my tittle; x name; frequency", 50, 0, 100);
     TRandom3 * r = new TRandom3();
 

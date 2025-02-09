@@ -2,6 +2,9 @@
 // Command to run: 
 // root -l tgraph_datafile4.cpp
 
+
+#include <TGraph.h>
+
 void tgraph_datafile4() {
   TGraph* gr = new TGraph("tutorials/data/data3delimit.dat","%lg %*lg %lg",",");// declaring TGraph pointer with first and third columns as well as delimiter ","
   gr->Draw();					// plotting graph on canvas

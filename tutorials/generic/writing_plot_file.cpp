@@ -1,3 +1,8 @@
+#include <TFile.h>
+#include <TGraph.h>
+#include <TRandom3.h>
+#include <TH1D.h>
+
 void writing_plot_file() {
     
     TFile * f = new TFile("tutorials/data/data.root", "RECREATE"); //RECREATE overwrties the file in case that it's actually created.

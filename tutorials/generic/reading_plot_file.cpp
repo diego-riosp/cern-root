@@ -1,3 +1,7 @@
+#include <TFile.h>
+#include <TH1D.h>
+#include <TGraph.h>
+
 void reading_plot_file() {
     TFile * file = new TFile("tutorials/data/data.root", "READ");
 

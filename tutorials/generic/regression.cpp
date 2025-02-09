@@ -1,3 +1,9 @@
+#include <iostream>
+#include <TGraph.h>
+#include <TF1.h>
+
+using namespace std;
+
 void regression() {
     TGraph* gr = new TGraph("tutorials/data/data.dat", "%lg %*lg %lg");
     TF1* fn = new TF1("fn", "[2]*x*x + [1]*x + [0]", -10, 10);

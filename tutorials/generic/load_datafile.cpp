@@ -1,3 +1,10 @@
+#include <fstream>
+#include <iostream>
+#include <TGraph.h>
+#include <fstream>
+
+using namespace std;
+
 void load_datafile() {
     ifstream infile;
     infile.open("tutorials/data/data1.dat");

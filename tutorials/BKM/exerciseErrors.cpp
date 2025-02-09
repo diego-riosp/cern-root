@@ -1,3 +1,13 @@
+#include <iostream>
+#include <TF1.h>
+#include <TCanvas.h>
+#include <TGraphErrors.h>
+#include <TRandom3.h>
+#include <TH1F.h>
+
+using namespace std;
+
+
 void exerciseErrors() {
     
     //Defining error graph
@@ -40,10 +50,9 @@ void exerciseErrors() {
         i++;
     }
     TF1 * ff = new TF1("ff","gaus");
-    
-    h->Fit(ff);
-    
+
     TCanvas * c2 = new TCanvas("c2", "Fitted histogram", 800, 600);
+    h->Fit(ff);
     h->Draw();
     c2->Update();
 }

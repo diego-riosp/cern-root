@@ -1,3 +1,12 @@
+#include <iostream>
+#include <TF1.h>
+#include <TCanvas.h>
+#include <TGraphErrors.h>
+#include <TRandom3.h>
+#include <TLegend.h>
+#include <TH1F.h>
+
+using namespace std;
 void exercises_BKM() {
 cout<<"This is a solution of each proposed exercise in ROOT tutorial by Brunner, Krucker and Mohamed"<<endl;
 }
@@ -42,6 +51,8 @@ void exerciseHistograms() {
 }
 
 void exerciseCanvas() {
+    //Creating Canvas     
+    TCanvas * c1 = new TCanvas("c1","Canvas(1) Exercise",800,600); 
     //Defining 1-dimensional float histograms
     TH1F * h1 = new TH1F("h1","Histogram 1;x bins;Frequency",50,-3,3);
     TH1F * h2 = new TH1F("h2","Histogram 2;x bins;Frequency",50,-3,3);
@@ -54,19 +65,25 @@ void exerciseCanvas() {
     
     //Filling second histogram 
     h2->FillRandom("pol2",500);
+    
+    //Cloning histograms
 
-    //Creating Canvas     
-    TCanvas * c1 = new TCanvas("c1","Canvas(1) Exercise",800,600); 
+    TH1F * h1b = (TH1F*) h1->Clone();
+    TH1F * h2b = (TH1F*) h2->Clone();
+    
+    TF1 * f = new TF1("f","gaus");
+    h1->Fit(f);
+    h2->Fit(f);
+
     
     //Changing histogram styles
     h1->SetLineColor(1);
     h2->SetLineColor(2);
     h1->SetLineWidth(3);
     h2->SetLineWidth(3);
-
-
+    
     //Plotting histograms
-    h1->Draw("hist");
+    h1->Draw();
     h2->Draw("same");
     
     //Creating legend
@@ -79,11 +96,9 @@ void exerciseCanvas() {
 
     //Updating canvas
     c1->Update();
-
-    //Cloning histograms
-
-    TH1F * h1b = (TH1F*) h1->Clone();
-    TH1F * h2b = (TH1F*) h2->Clone();
+    
+    //Creating second canvas
+    TCanvas * c2 = new TCanvas("c2","Canvas(2) Exercise",800,600);
 
     //Computing histogram integrals    
     double intgr1 = h1b->Integral();
@@ -102,15 +117,20 @@ void exerciseCanvas() {
     //Verifying normalisation
     cout<<"Now, the histogram 1(2) clonated is normalized to: "<<h1b->Integral()<<"("<<h2b->Integral()<<")"<<endl;
     
-    //Creating second canvas
-    TCanvas * c2 = new TCanvas("c2","Canvas(2) Exercise",800,600);
+
 
     //Setting cloned histogram styles
     h1b->SetLineColor(1);
     h2b->SetLineColor(2);
     h1b->SetLineWidth(3);
     h2b->SetLineWidth(3);
-    h1b->Draw("hist");
+    
+    TF1 * ff = new TF1("ff","gaus");
+
+    h1b->Fit(ff);
+    h2b->Fit(ff);
+    
+    h1b->Draw();
     h2b->Draw("same");
     
     //Creating legend for cloned histograms

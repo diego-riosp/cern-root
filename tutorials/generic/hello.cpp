@@ -5,8 +5,8 @@
 // ./a.out
 
 #include<iostream>
-#include"TH1D.h"
-#include"TFile.h"
+#include<TH1D.h>
+#include<TFile.h>
 using namespace std;
 void multiply(){
   cout<<2*3<<endl;

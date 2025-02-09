@@ -2,6 +2,8 @@
 // Command to run: 
 // root -l tgraph_datafile3.cpp
 
+#include <TGraph.h>
+
 void tgraph_datafile3() {
   TGraph* gr = new TGraph("tutorials/data/data3.dat", "%lg %*lg %lg");	// declaring TGraph pointer with first and third columns
   gr->Draw();					// plotting graph on canvas

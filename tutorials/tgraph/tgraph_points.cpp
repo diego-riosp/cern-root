@@ -2,6 +2,11 @@
 // Command to run: 
 // root -l tgraph_points.cpp
 
+#include <TGraph.h>
+#include <fstream>
+
+using namespace std;
+
 void tgraph_points() {
   ifstream infile;		// input file handle
   infile.open("tutorials/data/data2.dat");	// opening input data file 

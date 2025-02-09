@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/linuxuser/Documents/cern-root/build",
+  "command": "/usr/bin/c++    -pthread -std=c++17 -m64 -I/home/linuxuser/root/include -L/home/linuxuser/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/linuxuser/root/lib -pthread -lm -ldl -rdynamic -o CMakeFiles/mi_programa.dir/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/linuxuser/Documents/cern-root/build/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/linuxuser/Documents/cern-root/build/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+}
+]
