@@ -1,4 +1,4 @@
-## Runing ROOT in NeoVim with clang++
+## Running CERN ROOT LSP features in NeoVim with clang++
 
 ### Install NeoVim
 
@@ -7,7 +7,7 @@ First, you must intall neovim
 ```bash
 sudo apt update && sudo apt install neovim
 ```
-For Arch Linux, Use
+For Arch Linux, use
 
 ```bash
 sudo pacman -Syu && sudo pacman -S neovim
@@ -67,10 +67,13 @@ To install CERN ROOT in your system, run
 sudo apt install -y root-system
 ```
 
-In Arch Linux, run
+In Arch Linux, CERN ROOT is not in official repositories, but is in AUR. Then for install it via `yay` (or try `paru`), run (installing first `yay` with `base-devel` needed):
 
 ```bash
-sudo apt install -y root-system
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S root
 ```
 
 Now, clone the ROOT repository in ~ and compile
