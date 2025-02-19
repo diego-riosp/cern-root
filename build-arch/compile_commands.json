@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/archuser/Documents/cern-root/build-arch",
+  "command": "/usr/bin/c++    -pthread -std=c++17 -m64 -L/usr/lib/root -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic -std=gnu++17 -o CMakeFiles/program.dir/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/archuser/Documents/cern-root/build-arch/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/archuser/Documents/cern-root/build-arch/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "output": "CMakeFiles/program.dir/CMakeFiles/3.31.5/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
+}
+]

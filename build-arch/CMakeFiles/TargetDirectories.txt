@@ -1,0 +1,3 @@
+/home/archuser/Documents/cern-root/build-arch/CMakeFiles/program.dir
+/home/archuser/Documents/cern-root/build-arch/CMakeFiles/edit_cache.dir
+/home/archuser/Documents/cern-root/build-arch/CMakeFiles/rebuild_cache.dir
